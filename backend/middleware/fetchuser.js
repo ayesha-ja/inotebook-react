@@ -3,7 +3,7 @@ var jwt = require("jsonwebtoken");
 const JWT_SECRET = "mySecretKey";
 
 const fetchUser = (req, res, next) => {
-  const token = req.header("authToken");
+  const token = req.header("auth-token");
   if (!token) {
     return res.status(401).send("Access Denied");
   }
